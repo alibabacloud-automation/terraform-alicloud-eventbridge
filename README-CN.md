@@ -3,18 +3,19 @@ Terraform Module for creating EventBridge resources on Alibaba Cloud.
 terraform-alicloud-eventbridge
 =====================================================================
 
-English | [简体中文](README-CN.md)
+[English](README.md) | 简体中文
 
-This module is used to create a EventBridge resources under Alibaba Cloud.
+本 Module 用于在阿里云自动化管理消息事件总线 EventBridge，包括总线、源、规则、服务授权访问等
+。
 
-These types of resources are supported:
+本 Module 支持创建以下资源:
 
 * [alicloud_event_bridge_event_bus](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/event_bridge_event_bus)
 * [alicloud_event_bridge_event_source](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/event_bridge_event_source)
 * [alicloud_event_bridge_rule](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/event_bridge_rule)
 * [alicloud_event_bridge_service_linked_role](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/event_bridge_service_linked_role)
 
-## Usage
+## 用法
 
 ```hcl
 module "example" {
@@ -49,17 +50,16 @@ module "example" {
   product_name           = "AliyunServiceRoleForEventBridgeSendToMNS"
 }
 ```
+## 示例
 
-## Examples
+* [Clickhouse 完整示例](https://github.com/terraform-alicloud-modules/terraform-alicloud-eventbridge/tree/main/examples/complete)
 
-* [complete example](https://github.com/terraform-alicloud-modules/terraform-alicloud-eventbridge/tree/main/examples/complete)
+## 注意事项
 
-## Notes
+* 本 Module 使用的 AccessKey 和 SecretKey 可以直接从 `profile` 和 `shared_credentials_file`
+  中获取。如果未设置，可通过下载安装 [aliyun-cli](https://github.com/aliyun/aliyun-cli#installation) 后进行配置.
 
-* This module using AccessKey and SecretKey are from `profile` and `shared_credentials_file`. If you have not set them
-  yet, please install [aliyun-cli](https://github.com/aliyun/aliyun-cli#installation) and configure it.
-
-## Requirements
+## 要求
 
 | Name | Version |
 |------|---------|
@@ -72,22 +72,22 @@ module "example" {
 |------|---------|
 | <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | > = 1.160.0 |
 
-## Submit Issues
+## 提交问题
 
-If you have any problems when using this module, please opening
-a [provider issue](https://github.com/aliyun/terraform-provider-alicloud/issues/new) and let us know.
+如果在使用该 Terraform Module
+的过程中有任何问题，可以直接创建一个 [Provider Issue](https://github.com/aliyun/terraform-provider-alicloud/issues/new)，我们将根据问题描述提供解决方案。
 
-**Note:** There does not recommend opening an issue on this repo.
+**注意:** 不建议在该 Module 仓库中直接提交 Issue。
 
-## Authors
+## 作者
 
 Created and maintained by Alibaba Cloud Terraform Team(terraform@alibabacloud.com).
 
-## License
+## 许可
 
 MIT Licensed. See LICENSE for full details.
 
-## Reference
+## 参考
 
 * [Terraform-Provider-Alicloud Github](https://github.com/aliyun/terraform-provider-alicloud)
 * [Terraform-Provider-Alicloud Release](https://releases.hashicorp.com/terraform-provider-alicloud/)
