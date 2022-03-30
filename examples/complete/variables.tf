@@ -42,12 +42,6 @@ variable "rule_status" {
   default     = "ENABLE"
 }
 
-variable "target_endpoint" {
-  description = "The endpoint of target."
-  type        = string
-  default     = "acs:mns:cn-beijing:123456xxx:queues/tf-test"
-}
-
 variable "target_type" {
   description = "The type of target."
   type        = string
