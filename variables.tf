@@ -5,12 +5,6 @@ variable "create_bus" {
   default     = false
 }
 
-variable "event_bus_id" {
-  description = "The id of event bus.It will be ignored when create_bus = true"
-  type        = string
-  default     = ""
-}
-
 variable "event_bus_name" {
   description = "The name of event bus."
   type        = string
@@ -28,6 +22,12 @@ variable "create_source" {
   description = "Controls if event source should be created"
   type        = bool
   default     = false
+}
+
+variable "event_bus_id" {
+  description = "The id of event bus.It will be ignored when create_bus = true"
+  type        = string
+  default     = ""
 }
 
 variable "event_source_name" {
