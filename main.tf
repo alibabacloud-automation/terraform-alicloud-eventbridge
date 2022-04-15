@@ -1,4 +1,3 @@
-
 resource "alicloud_event_bridge_event_bus" "bus" {
   count          = var.create_bus ? 1 : 0
   event_bus_name = var.event_bus_name
@@ -35,12 +34,12 @@ resource "alicloud_event_bridge_rule" "rule" {
     endpoint  = var.target_endpoint
     type      = var.target_type
     dynamic "param_list" {
-      for_each        = var.param_list
+      for_each = var.param_list
       content {
-        resource_key  = param_list.value["resource_key"]
-        form          = param_list.value["form"]
-        value         = param_list.value["value"]
-        template      = param_list.value["template"]
+        resource_key = param_list.value["resource_key"]
+        form         = param_list.value["form"]
+        value        = param_list.value["value"]
+        template     = param_list.value["template"]
       }
     }
   }

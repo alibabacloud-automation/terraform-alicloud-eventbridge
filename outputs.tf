@@ -1,4 +1,3 @@
-
 output "event_bus_id" {
   description = "The id of the event bridge event bus."
   value       = local.this_event_bus_id
