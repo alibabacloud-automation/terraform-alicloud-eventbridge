@@ -15,7 +15,7 @@ variable "source_description" {
 variable "linked_external_source" {
   description = "Whether to connect to an external data source. Default value: false"
   type        = bool
-  default     = false
+  default     = true
 }
 
 #alicloud_event_bridge_rule
