@@ -3,7 +3,6 @@ bus_description = "update-tf-testacc-event-bus-description"
 
 #alicloud_event_bridge_event_source
 source_description     = "update-tf-testacc-event-source-description"
-linked_external_source = true
 
 #alicloud_event_bridge_rule
 rule_description    = "update-tf-testacc-rule-description"
