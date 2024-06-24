@@ -88,6 +88,11 @@ module "event_bridge_rule" {
       form         = "ORIGINAL"
       value        = ""
       template     = ""
+    },
+    {
+      form         = "CONSTANT"
+      resource_key = "IsBase64Encode"
+      value        = "true"
     }
   ]
 

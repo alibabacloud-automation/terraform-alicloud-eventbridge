@@ -36,10 +36,10 @@ resource "alicloud_event_bridge_rule" "rule" {
     dynamic "param_list" {
       for_each = var.param_list
       content {
-        resource_key = param_list.value["resource_key"]
-        form         = param_list.value["form"]
-        value        = param_list.value["value"]
-        template     = param_list.value["template"]
+        resource_key = lookup(param_list.value, "resource_key", null)
+        form         = lookup(param_list.value, "form", null)
+        value        = lookup(param_list.value, "value", null)
+        template     = lookup(param_list.value, "template", null)
       }
     }
   }
