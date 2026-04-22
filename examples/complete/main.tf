@@ -6,8 +6,9 @@ data "alicloud_account" "default" {
 }
 
 module "mns_queue" {
-  source = "terraform-alicloud-modules/mns-queue/alicloud"
-  name   = "tf-testacc-mns-queue-2022"
+  source  = "terraform-alicloud-modules/mns-queue/alicloud"
+  version = "2.0.0"
+  name    = "tf-testacc-mns-queue-2022"
 }
 
 module "event_bridge_event_bus" {
